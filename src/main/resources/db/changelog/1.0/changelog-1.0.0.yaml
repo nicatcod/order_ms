@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create order table
+      author: Nicat Alverdiyev
+      changes:
+        - createTable:
+            tableName: orders
+            remarks: Table to store information about orders
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: price
+                  type: decimal
+                  constraints:
+                    nullable: false
+              - column:
+                  name: count
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: custumer_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+
+
+
+
+
